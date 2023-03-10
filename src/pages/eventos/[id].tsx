@@ -1,7 +1,33 @@
 import React from "react"
 import Image from "next/image"
-import { IEvent } from "../../../types"
 import { GetStaticPaths, GetStaticProps } from "next"
+import { useRouter } from "next/router"
+import { useEvent } from "@/hooks/useEvents"
+
+const Event = () => {
+	
+	const router = useRouter()
+	
+	const id = ()=>{
+		const id = router.query.id
+		if(typeof id == "string"){
+			return id
+		}
+		return "1"
+	}
+	const event= useEvent(id())
+	
+	return(
+		event&&
+		<div>
+			<Image src={event.image} width="100" height="40" alt={event.title}/>
+			<h3>{event.title}</h3>
+			<p>{event.description}</p>
+		</div>      
+	)
+}
+
+export default Event
 
 export const getStaticPaths: GetStaticPaths = () => {
 	return { 
@@ -15,43 +41,9 @@ export const getStaticPaths: GetStaticPaths = () => {
 	}
 }
 
-type response = {
-    message: string,
-    event: IEvent
-}
-
-export const getStaticProps : GetStaticProps = async (context)=> {
-
-	const { params } = context
-	if(params){
-		const e = await fetch(`http://localhost:3000/api/events/${params.id}`)
-		const event : response = await e.json()
-		
-		return {
-			props: {
-				event: event.event
-			},
-		}
-	}
+export const getStaticProps : GetStaticProps =()=> {
 	return {
 		props: {},
 	}
 }
-
-type props = {
-    event: IEvent
-}
-  
-const Event = ({event}: props) => {
-	return(
-		<div>
-			<Image src={event.image} width="100" height="40" alt={event.title}/>
-			<h3>{event.title}</h3>
-			<p>{event.description}</p>
-		</div>      
-	)
-}
-
-export default Event
-
 

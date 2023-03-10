@@ -17,4 +17,23 @@ export const useEvents = () =>{
 	return events
 }
 
+type IuseEvent = (id: string) => IEvent | undefined
+
+export const useEvent : IuseEvent = (id) =>{
+
+	const [event, setEvent] = useState<IEvent>({id:"",title:"",description:"",image:""})
+
+	useEffect(()=>{
+		const fetchData = async ()=>{
+			const res = await fetch(`/api/events/${id}`)
+			const resEvents = await res.json()
+			setEvent(resEvents)
+		}
+		fetchData()
+	}, [id])
+	if(event){
+		return event
+	}
+}
+
 
