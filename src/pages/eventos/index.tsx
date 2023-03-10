@@ -1,15 +1,17 @@
-import React from "react"
-import { events } from "../../../data"
+import React, { useContext } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { cdfContext } from "@/context"
 
 const Events = () => {
+
+	const { events } = useContext(cdfContext)
 
 	return (
 		<div>Eventos
 			<ul>
 				{
-					events.map((event)=>{
+					events?.map((event)=>{
 						return(
 							<li key={event.id}>
 								<Link href={`/eventos/${event.id}`}>

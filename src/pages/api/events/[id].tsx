@@ -4,14 +4,14 @@ import { events } from "../../../../data"
 
 type response = {
     message: string,
-    event: IEvent
+    event: IEvent | undefined
 }
 
 const handler = async (req : NextApiRequest, res : NextApiResponse<response>) => {
 
 	const { id } = req.query
     
-	const findEvent : IEvent = events.find((e)=>e.id == id)
+	const findEvent : IEvent | undefined = events.find((e)=>e.id == id)
 
 	if(!findEvent){
 		res.status(403).json({message: "No se encontraron eventos", event: findEvent})

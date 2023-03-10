@@ -3,17 +3,18 @@ import { IEvent } from "../../../../types"
 import { events } from "../../../../data"
 
 type response = {
-    message: string,
+    message?: string,
     events: IEvent[]
 }
 
-const handler = async (req : NextApiRequest, res : NextApiResponse<response>) => {
+
+const handler = async (req : NextApiRequest, res : NextApiResponse<response | IEvent[]>) => {
 
 	if(!events){
 		res.status(403).json({message: "No se encontraron eventos", events})
 	}
 
-	res.status(200).json({message: "Evento encontrado", events})
+	res.status(200).json(events)
 }
 
 
