@@ -1,3 +1,5 @@
+import { Banner } from "@/components/banner"
+import { Video } from "@/components/video"
 import Head from "next/head"
 import React from "react"
 
@@ -7,7 +9,8 @@ export default function Home() {
 			<Head>
 				<title>Casa del futuro</title>
 			</Head>
-			<div>Home</div>
+			<Banner/>
+			<Video/>
 		</>
 	)
 }
