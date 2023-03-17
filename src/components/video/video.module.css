@@ -1,0 +1,10 @@
+/* Clases del video de presentacion */
+.video-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.video{
+    width: 80%;
+    max-width: 600px;
+}

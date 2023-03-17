@@ -1,0 +1,2 @@
+export const HOME_BANNER_TITLE = "Bienvenid@s a Casa del Futuro Godoy Cruz"
+export const HOME_BANNER_DESCRIPTION = "Espacio educativo, para jóvenes de 15 a 30 años, orientado a la capacitación gratuita en oficios digitales, tradicionales y para la empleabilidad."
