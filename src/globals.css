@@ -5,36 +5,36 @@
 }
 :root{
     --var-violeta : #800080;
-} */
+} 
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #800080;
- }
+}
  
- .social{
+.social{
     display: flex;
     justify-content: center;
     align-items: center;
     padding-left: 5px;
- }
+}
  
- .socialitem{
-       color: white;
-       text-decoration: none;
-       font-size: 100%;
-       padding: 5px;
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-       align-items: center;
- }
+.socialitem{
+    color: white;
+    text-decoration: none;
+    font-size: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
  
- .socialitem:hover{
-       position: relative;
-       bottom: 3px;
-       color: #e0e0e0;
- 
- }
+.socialitem:hover{
+    position: relative;
+    bottom: 3px;
+    color: #e0e0e0;
+
+}
  
