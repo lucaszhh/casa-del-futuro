@@ -41,7 +41,10 @@ export const getStaticPaths: GetStaticPaths = () => {
 	}
 }
 
-export const getStaticProps : GetStaticProps =()=> {
+export const getStaticProps : GetStaticProps = async ()=> {
+
+	
+
 	return {
 		props: {},
 	}
