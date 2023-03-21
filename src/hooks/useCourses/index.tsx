@@ -14,9 +14,26 @@ export const useCourses = () =>{
 		}
 		fetchData()
 	}, [])
-
 	return courses
+}
 
+type IuseCourse = (id: string) => ICourse | undefined
+
+export const useCourse : IuseCourse = (id) =>{
+
+	const [course, setCourse] = useState<ICourse>({id:"",title:"",description:"",image:""})
+
+	useEffect(()=>{
+		const fetchData = async ()=>{
+			const res = await fetch(`/api/courses/${id}`)
+			const resCourse = await res.json()
+			setCourse(resCourse)
+		}
+		fetchData()
+	}, [id])
+	if(course){
+		return course
+	}
 }
 
 

@@ -1,7 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next"
 import { IEvent } from "../../../../types"
 import { events } from "../../../../data"
-import { useState } from "react"
 
 type response = {
     message: string,
@@ -11,6 +10,8 @@ type response = {
 const handler = async (req : NextApiRequest, res : NextApiResponse<response | IEvent >) => {
 
 	const { id } = req.query
+	console.log(id);
+	
 
 	const findEvent = ()=>{
 		const event = events.find((e)=>e.id == id)
