@@ -2,8 +2,7 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import logoCdf from "./coverNotion-cdf.png"
-import { MyHeader,Nav,IconSocialMedia,LinkIcon } from "./header.styled"
-import { faHome, faChalkboardUser, faCalendarAlt, faCommentAlt } from '@fortawesome/free-solid-svg-icons'
+import { MyHeader} from "./header.styled"
 import { NavSocialMedia } from "./navSocialMedia"
 import { NavBar } from "./navBar"
 

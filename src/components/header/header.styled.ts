@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 import Link from "next/link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
@@ -6,7 +6,7 @@ export const MyHeader = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--var-violet-primary);
+    background-color: ${props => props.theme.colors.violetPrimary};
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 `
 
@@ -29,11 +29,11 @@ export const LinkIcon = styled(Link)`
     gap: 5px;
 
     &:hover {
-        position: relative;
+    position: relative;
     bottom: 3px;
     color: #e0e0e0;
     }
 `
 export const IconSocialMedia = styled(FontAwesomeIcon)`
     font-size: 25px;
-` 
+`   
