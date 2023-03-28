@@ -21,7 +21,7 @@ type IuseEvent = (id: string) => IEvent | undefined
 
 export const useEvent : IuseEvent = (id) =>{
 
-	const [event, setEvent] = useState<IEvent>({id:"",title:"",description:"",image:""})
+	const [event, setEvent] = useState<IEvent>({id:"",title:"",description:"",image:"",duration:""})
 
 	useEffect(()=>{
 		const fetchData = async ()=>{

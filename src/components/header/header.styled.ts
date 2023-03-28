@@ -7,7 +7,10 @@ export const MyHeader = styled.header`
     justify-content: space-between;
     align-items: center;
     background-color: ${props => props.theme.colors.violetPrimary};
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: ${props=>props.theme.shadows.bgShadow};
+    position: sticky;
+    top: 0;
+    z-index: 99;
 `
 
 export const Nav = styled.nav`

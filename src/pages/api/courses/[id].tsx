@@ -1,7 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next"
 import { ICourse } from "../../../../types"
 import { courses } from "../../../../data"
-import { useState } from "react"
 
 type response = {
     message: string,
@@ -17,7 +16,7 @@ const handler = async (req : NextApiRequest, res : NextApiResponse<response | IC
 		if(course){
 			return course
 		}
-		return {id:"",title:"",description:"",image:""}
+		return {id:"",title:"",description:"",image:"",duration: ""}
 	}
 
 	if(!findEvent){

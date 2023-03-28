@@ -1,7 +1,7 @@
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import logoCdf from "./coverNotion-cdf.png"
+import logoCdf from "./logoCdf.png"
 import { MyHeader} from "./header.styled"
 import { NavSocialMedia } from "./navSocialMedia"
 import { NavBar } from "./navBar"

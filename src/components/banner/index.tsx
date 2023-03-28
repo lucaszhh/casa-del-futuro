@@ -1,13 +1,9 @@
 import { HOME_BANNER_DESCRIPTION, HOME_BANNER_TITLE } from "../../../constants"
 import { DivImage } from "./banner.styled"
+import imageBanner from "./imageBanner.png"
 
 export const Banner = () => {
     return (
-        <>
-            <DivImage>
-                <h3>{HOME_BANNER_TITLE}</h3>
-                <p>{HOME_BANNER_DESCRIPTION}</p>
-            </DivImage>
-        </>
+            <DivImage alt="Imagen banner de la casa del futuro" src={imageBanner} height={450} width={1050}/> 
     )
 }
