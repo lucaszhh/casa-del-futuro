@@ -1,4 +1,5 @@
 import { Banner } from "@/components/banner"
+import Quote from "@/components/quote"
 import { Video } from "@/components/video"
 import Head from "next/head"
 import React from "react"
@@ -14,6 +15,7 @@ export default function Home() {
 			<Banner/>
 			{/* <Video/> */}
 			<Events/>
+			<Quote/>
 			<Courses/>
 		</>
 	)

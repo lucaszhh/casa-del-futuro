@@ -26,7 +26,7 @@ export const LinkIcon = styled(Link)`
     font-size: 20px;
     padding: 5px;
     display: flex;
-    flex-direction: column;
+/*     flex-direction: column; */
     justify-content: center;
     align-items: center;
     gap: 5px;

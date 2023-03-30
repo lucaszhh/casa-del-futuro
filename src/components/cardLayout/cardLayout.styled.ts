@@ -11,7 +11,7 @@ export const CardsSection = styled.div`
 export const CardsLayout = styled.div`
     padding: 0rem 2.5rem 1rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 1.5rem;
 `
 export const CardsLayoutTitle = styled.h2`

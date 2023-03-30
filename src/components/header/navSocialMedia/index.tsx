@@ -1,6 +1,6 @@
 import {Nav, LinkIcon, IconSocialMedia} from "../header.styled"
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
-import { faWhatsapp, faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons"
+import { faWhatsapp, faInstagram, faYoutube} from "@fortawesome/free-brands-svg-icons"
 
 export const NavSocialMedia = () => {
     return(
@@ -14,8 +14,8 @@ export const NavSocialMedia = () => {
 				<LinkIcon href="https://instagram.com/casadelfuturo.godoycruz?utm_medium=copy_link" target="_blank">
 					<IconSocialMedia icon={faInstagram}/>
 				</LinkIcon>
-				<LinkIcon href="https://www.facebook.com/pages/Casa%20Del%20Futuro%20Godoy%20Cruz/2030594193923869/" target="_blank" >
-					<IconSocialMedia icon={faFacebook}/>
+				<LinkIcon href="https://www.youtube.com/@casadelfuturogc6632" target="_blank" >
+					<IconSocialMedia icon={faYoutube}/>
 				</LinkIcon>
 		</Nav>
     )

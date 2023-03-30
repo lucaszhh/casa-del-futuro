@@ -1,4 +1,4 @@
-export type IEvent = {
+export interface IEvent {
     id: string,
     title: string,
     description: string,
@@ -6,7 +6,7 @@ export type IEvent = {
     duration: string
 }
 
-export type ICourse = {
+export interface ICourse  {
     id: string,
     title: string,
     description: string,
@@ -14,7 +14,13 @@ export type ICourse = {
     duration: string
 }
 
-export type IContext = {
+export interface IContext {
     events: IEvent[],
     courses: ICourse[]
+}
+
+export interface IQuote {
+    id: string,
+    quote: string,
+    author: string
 }

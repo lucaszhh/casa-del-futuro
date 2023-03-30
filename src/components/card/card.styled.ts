@@ -8,7 +8,7 @@ export const CardStyled = styled.div`
     box-shadow: ${props=>props.theme.shadows.bgShadow};
     background-color: ${props=>props.theme.colors.whiteSecondary};
     border-radius: 1rem;
-    max-width: 500px;
+    max-width: 800px;
     height: auto 100%;
 `
 

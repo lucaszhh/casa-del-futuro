@@ -1,6 +1,6 @@
-import { IEvent } from "../types"
+import { ICourse, IEvent, IQuote } from "../types"
 
-export const courses : IEvent[] = [
+export const courses : ICourse[] = [
 	{
 		id: "1",
 		title: "📸 Fotografía",
@@ -118,4 +118,17 @@ export const events : IEvent[] = [
 		duration: "2 horas"
 	},
     
+]
+
+export const quote : IQuote[] = [
+	{
+		id:"1",
+		quote:"Hay una fuerza motriz más poderosa que el vapor, la electricidad y la energía atómica: La Voluntad",
+		author:"Albert Einstein"
+	},
+	{
+		id:"2",
+		quote:"La emoción de aprender nuevas tecnologías es increíblemente alta.",
+		author:"Bill Gates"
+	},
 ]
