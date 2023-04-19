@@ -1,12 +1,13 @@
 import { Banner } from "@/components/banner"
 import Quote from "@/components/quote"
-import { Video } from "@/components/video"
 import Head from "next/head"
-import React from "react"
-import Courses from "./cursos"
+import React, { useContext } from "react"
 import Events from "./eventos"
+import CardLayout from "@/components/cardLayout"
+import { cdfContext } from "@/context"
 
 export default function Home() {
+	const { courses, events } = useContext(cdfContext)
 	return (
 		<>
 			<Head>
@@ -14,9 +15,9 @@ export default function Home() {
 			</Head>
 			<Banner/>
 			{/* <Video/> */}
-			<Events/>
+			<CardLayout isEvent={false} data={events}/>
 			<Quote/>
-			<Courses/>
+			<CardLayout isEvent={false} data={courses}/>
 		</>
 	)
 }

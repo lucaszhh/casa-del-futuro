@@ -15,7 +15,7 @@ const handler = async (req : NextApiRequest, res : NextApiResponse<response | IC
 		if(course){
 			return course
 		}
-		return {id:"",title:"",description:"",image:"",duration: ""}
+		return {id:"",title:"",description:"",image:"",duration: "",icon:""}
 	}
 
 	if(!findEvent){

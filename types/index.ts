@@ -3,7 +3,8 @@ export interface IEvent {
     title: string,
     description: string,
     image: string,
-    duration: string
+    duration: string,
+    icon: string
 }
 
 export interface ICourse  {
@@ -11,7 +12,8 @@ export interface ICourse  {
     title: string,
     description: string,
     image: string,
-    duration: string
+    duration: string,
+    icon: string
 }
 
 export interface IContext {
@@ -23,4 +25,9 @@ export interface IQuote {
     id: string,
     quote: string,
     author: string
+}
+
+export interface ICategory{
+    category: string,
+    icon: string
 }

@@ -1,25 +1,30 @@
 import React from "react"
-import Card from "@/components/card"
 import { CardsLayout, CardsLayoutTitle, CardsSection } from "./cardLayout.styled"
 import { IEvent, ICourse } from "../../../types"
 import 'animate.css';
+import BasicCard from "../cardMU";
 
 type props = {
     data: IEvent[] | ICourse[],
-    isEvent: boolean
+    isEvent: boolean,
+    random?: boolean
 }
 
-const CardLayout = ({data, isEvent}: props) => {
+const CardLayout = ({data, isEvent, random}: props) => {
 
     const shuffle : (data: IEvent[] | ICourse[] ) => IEvent[] | ICourse[] = (data) => {
-        return data.sort(() => 0.5 - Math.random())
-    } 
+        if(random){
+            return data.sort(() => 0.5 - Math.random())
+        } else{
+            return data
+        }
+    }
     
     const cardList = shuffle(data).map((data)=>{
         if(isEvent){
-            return <Card isEvent data={data}></Card>
+            return <BasicCard isEvent data={data}></BasicCard>
         }
-        return <Card isEvent={false} data={data}></Card>
+        return <BasicCard isEvent={false} data={data}></BasicCard>
     })
 
     return (
