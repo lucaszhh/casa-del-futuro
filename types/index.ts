@@ -4,7 +4,7 @@ export interface IEvent {
     description: string,
     image: string,
     duration: string,
-    icon: string
+    category: ICategory
 }
 
 export interface ICourse  {
@@ -13,7 +13,7 @@ export interface ICourse  {
     description: string,
     image: string,
     duration: string,
-    icon: string
+    category: ICategory
 }
 
 export interface IContext {

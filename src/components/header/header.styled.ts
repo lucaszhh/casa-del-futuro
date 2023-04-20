@@ -6,8 +6,7 @@ export const MyHeader = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: ${props => props.theme.colors.violetPrimary};
-    box-shadow: ${props=>props.theme.shadows.bgShadow};
+    background-color: #800080;
     position: sticky;
     top: 0;
     z-index: 99;
