@@ -4,3 +4,6 @@
     box-sizing: border-box;
     font-family: 'Rubik';
 }
+a {
+    text-decoration: none;
+}

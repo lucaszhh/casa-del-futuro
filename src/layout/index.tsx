@@ -1,4 +1,4 @@
-import Header from "../components/header"
+import ResponsiveAppBar from "@/components/headerMui"
 import React from "react"
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 const Layout= ({children}: Props) => {
 	return (
 		<>
-			<Header/>
+			<ResponsiveAppBar/>
 			{children}
 		</>
 	)

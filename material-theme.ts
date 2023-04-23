@@ -6,6 +6,8 @@ declare module "@mui/material/Button" {
     }
 }
 
+
+
 export const theme = createTheme({
     palette: {
         primary: {
@@ -27,12 +29,30 @@ export const theme = createTheme({
                 {
                     props: { variant: "primary" },
                     style: {
-                        color: "red",
-                        backgroundColor: "red"
+                        color: "#FFFFFF",
+                        backgroundColor: "#800080",
+                        textDecoration: "none",
+                        "&:hover": {
+                            backgroundColor: "#510051",
+                        },
                     }
                 }
             ]
-        }
+        },
+        MuiCard: {
+            variants: [
+                {
+                    props: { variant: "outlined" },
+                    style: {
+                        border: "1px solid #C4C4C4",
+                        borderRadius: "10px",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "space-between",
+                    },
+                },
+            ],
+        },
     }
 })
 

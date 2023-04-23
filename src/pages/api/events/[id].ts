@@ -17,7 +17,7 @@ const handler = async (req : NextApiRequest, res : NextApiResponse<response | IE
 		if(event){
 			return event
 		}
-		return {id:"",title:"",description:"",image:"", duration:"",icon:""}
+		return {id:"",title:"",description:"",image:"", duration:"",category:{icon:"",category:""}}
 	}
 
 	if(!findEvent){

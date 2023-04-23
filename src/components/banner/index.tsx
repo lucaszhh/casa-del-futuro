@@ -1,9 +1,13 @@
 import { HOME_BANNER_DESCRIPTION, HOME_BANNER_TITLE } from "../../../constants"
-import { DivImage } from "./banner.styled"
-import imageBanner from "./imageBanner.png"
+import Image from "next/image"
+import cdfBanner from "/public/imgs/casaDelFuturo.png"
+import Box  from "@mui/material/Box"
+
 
 export const Banner = () => {
     return (
-            <DivImage alt="Imagen banner de la casa del futuro" src={imageBanner} height={450} width={1050}/> 
+        <Box>
+            <Image alt="Imagen banner de la casa del futuro" src={cdfBanner} style={{maxWidth: "100%", height: "auto"}} /> 
+        </Box>
     )
 }

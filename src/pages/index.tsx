@@ -5,6 +5,7 @@ import React, { useContext } from "react"
 import Events from "./eventos"
 import CardLayout from "@/components/cardLayout"
 import { cdfContext } from "@/context"
+import ResponsiveAppBar from "@/components/headerMui"
 
 export default function Home() {
 	const { courses, events } = useContext(cdfContext)
@@ -15,9 +16,9 @@ export default function Home() {
 			</Head>
 			<Banner/>
 			{/* <Video/> */}
-			<CardLayout isEvent={false} data={events}/>
+			<CardLayout random isEvent={false} data={courses}/>
 			<Quote/>
-			<CardLayout isEvent={false} data={courses}/>
+			<CardLayout random isEvent data={events}/>
 		</>
 	)
 }

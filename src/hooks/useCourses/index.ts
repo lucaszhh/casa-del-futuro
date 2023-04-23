@@ -21,7 +21,7 @@ type IuseCourse = (id: string) => ICourse | undefined
 
 export const useCourse : IuseCourse = (id) =>{
 
-	const [course, setCourse] = useState<ICourse>({id:"",title:"",description:"",image:"",duration:""})
+	const [course, setCourse] = useState<ICourse>({id:"",title:"",description:"",image:"",duration:"",category:{icon:"",category:""}})
 
 	useEffect(()=>{
 		const fetchData = async ()=>{

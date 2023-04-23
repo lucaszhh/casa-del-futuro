@@ -11,7 +11,7 @@ const handler = async (req : NextApiRequest, res : NextApiResponse<response | IQ
 
     const randomQuote = quote[Math.floor(Math.random() * quote.length)]
 
-	if(!quote){
+	if(!randomQuote){
 		res.status(403).json({message: "No se encontraro quote"})
 	}
 

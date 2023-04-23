@@ -1,8 +1,7 @@
 import React from "react"
-import { CardsLayout, CardsLayoutTitle, CardsSection } from "./cardLayout.styled"
 import { IEvent, ICourse } from "../../../types"
-import 'animate.css';
-import BasicCard from "../cardMU";
+import BasicCard from "../card";
+import { Box, Typography } from "@mui/material";
 
 type props = {
     data: IEvent[] | ICourse[],
@@ -14,7 +13,9 @@ const CardLayout = ({data, isEvent, random}: props) => {
 
     const shuffle : (data: IEvent[] | ICourse[] ) => IEvent[] | ICourse[] = (data) => {
         if(random){
-            return data.sort(() => 0.5 - Math.random())
+            const datarandom = data.sort(() => 0.5 - Math.random()).slice(0,4)
+            console.log("random",datarandom)
+            return datarandom
         } else{
             return data
         }
@@ -28,10 +29,14 @@ const CardLayout = ({data, isEvent, random}: props) => {
     })
 
     return (
-        <CardsSection>
-            <CardsLayoutTitle>{isEvent?"Eventos":"Cursos"}</CardsLayoutTitle>
-            <CardsLayout className="animate__backInUp">{cardList}</CardsLayout>
-        </CardsSection>
+        <Box sx={{    display: "flex", flexDirection: "column", alignItems: "center", gap: "2rem", paddingBottom: "5rem"}}>
+                <Typography variant="h3" sx={{ padding: "2rem 2.5rem 0rem", fontWeight:"bold"}}>
+                    {isEvent?"Eventos":"Cursos"}
+                </Typography>
+                <Box sx={{ display:"flex", flexWrap:"wrap", justifyContent:"center", gap:"50px", maxWidth:"1000px", }}>
+                    {cardList}
+                </Box>
+        </Box>
     )
 }
 

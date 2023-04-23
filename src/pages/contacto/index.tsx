@@ -1,13 +1,9 @@
-import Button from "@/components/button"
 import React from "react"
 
-const Contact = () => {
+const Fablab = () => {
 	return (
-		<div>Contacto
-			<Button content="Click" secondary/>
-			<Button content="Primary"/>
-		</div>
+		<div>Fablab</div>
 	)
 }
 
-export default Contact
+export default Fablab
