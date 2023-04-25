@@ -1,14 +1,17 @@
+import { NextPage, GetServerSideProps } from 'next'
 import { Banner } from "@/components/banner"
 import Quote from "@/components/quote"
 import Head from "next/head"
-import React, { useContext } from "react"
-import Events from "./eventos"
+import React from "react"
 import CardLayout from "@/components/cardLayout"
-import { cdfContext } from "@/context"
-import ResponsiveAppBar from "@/components/headerMui"
+import { ICourse, IEvent } from '../../types'
 
-export default function Home() {
-	const { courses, events } = useContext(cdfContext)
+type Props = {
+	courses: ICourse[],
+	events: IEvent[]
+}
+
+const Home: NextPage<Props> =({courses, events} : Props) => {
 	return (
 		<>
 			<Head>
@@ -22,3 +25,17 @@ export default function Home() {
 		</>
 	)
 }
+
+const URL_WEB = process.env.URL_WEB
+
+export const getServerSideProps: GetServerSideProps = async () => {
+	const resCourse = await fetch(URL_WEB + "api/courses")
+	const resEvent = await fetch(URL_WEB + "api/events")
+	const courses = await resCourse.json()
+	const events = await resEvent.json()
+	return {
+		props: { courses, events }
+	}
+}
+
+export default Home

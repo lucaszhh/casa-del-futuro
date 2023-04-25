@@ -1,62 +1,34 @@
 import React from "react"
 import Image from "next/image"
-import { GetStaticPaths, GetStaticProps } from "next"
-import { useRouter } from "next/router"
-import { useCourse } from "@/hooks/useCourses"
+import { GetServerSideProps, GetServerSidePropsContext, NextPage } from "next"
+import { ICourse } from "../../../types"
 
-const Event = () => {
-	
-	const router = useRouter()
-	
-	const id = ()=>{
-		const id = router.query.id
-		if(typeof id == "string"){
-			return id
-		}
-		return "1"
-	}
-	const course = useCourse(id())
-    console.log(course);
-    
-	
-	return(
-		course&&
+type Props = {
+	course: ICourse
+}
+
+const Event: NextPage<Props> = ({ course }: Props) => {
+	return (
+		course &&
 		<div>
-			<Image src={course.image} width="100" height="40" alt={course.title}/>
+			<Image src={course.image} width="100" height="40" alt={course.title} />
 			<h3>{course.title}</h3>
 			<p>{course.description}</p>
-		</div>      
+		</div>
 	)
 }
 
 export default Event
 
+const URL_WEB = process.env.URL_WEB
 
-
-
-export const getStaticPaths: GetStaticPaths = () => {
-	return { 
-		paths: [
-			{ params: { id: "1" }},
-			{ params: { id: "2" }},
-			{ params: { id: "3" }},
-			{ params: { id: "4" }},
-			{ params: { id: "5" }},
-			{ params: { id: "6" }},
-			{ params: { id: "7" }},
-			{ params: { id: "8" }},
-			{ params: { id: "9" }},
-			{ params: { id: "10" }},
-			{ params: { id: "11" }},
-			{ params: { id: "12" }},
-		], 
-		fallback: false
-	}
-}
-
-export const getStaticProps : GetStaticProps = async ()=> {
+export const getServerSideProps: GetServerSideProps = async (context : GetServerSidePropsContext) => {
+	const id = parseInt(context.params?.id as string)
+	const res = await fetch(URL_WEB + `api/courses/${id}`)
+	const course = await res.json()
 	return {
-		props: {},
+		props: { course ,
+		revalidate: 10,}
 	}
 }
 

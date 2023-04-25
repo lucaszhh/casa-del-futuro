@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 
 const Quote = () => {
-    const quote : IQuote | undefined = useQuote()
+    const quote : IQuote = useQuote()
     return(
         <Box sx={{ width: "100%", gap: "20px", padding: "20px 200px", backgroundColor: "#3f3f3f", display: "flex", flexDirection: "column", alignItems: "center", color: "white", '@media screen and (max-width: 768px)': {padding:"5px 20px"}}}>
                 {quote &&

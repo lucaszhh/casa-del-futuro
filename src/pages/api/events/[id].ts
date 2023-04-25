@@ -7,25 +7,14 @@ type response = {
 }
 
 const handler = async (req : NextApiRequest, res : NextApiResponse<response | IEvent >) => {
-
 	const { id } = req.query
-	console.log(id);
-	
-
-	const findEvent = ()=>{
-		const event = events.find((e)=>e.id == id)
-		if(event){
-			return event
-		}
-		return {id:"",title:"",description:"",image:"", duration:"",category:{icon:"",category:""}}
+	const event = events.find((e)=>e.id == id)
+	if(event){
+		res.status(200).json(event)
 	}
-
-	if(!findEvent){
+	else{
 		res.status(403).json({message: "No se encontraron eventos"})
 	}
-	
-	res.status(200).json(findEvent())
 }
-
 
 export default handler

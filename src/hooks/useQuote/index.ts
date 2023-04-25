@@ -4,7 +4,7 @@ import { IQuote } from "../../../types"
 
 export const useQuote = () =>{
 
-	const [quote, setQuote] = useState<IQuote>()
+	const [quote, setQuote] = useState<IQuote>({id:"",quote:"",author:""})
 
 	useEffect(()=>{
 		const fetchData = async ()=>{

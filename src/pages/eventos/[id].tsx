@@ -1,21 +1,15 @@
 import React from "react"
 import Image from "next/image"
-import { GetStaticPaths, GetStaticProps } from "next"
-import { useRouter } from "next/router"
-import { useEvent } from "@/hooks/useEvents"
+import { GetServerSideProps, GetServerSidePropsContext, NextPage } from "next"
 
-const Event = () => {
-	
-	const router = useRouter()
-	
-	const id = ()=>{
-		const id = router.query.id
-		if(typeof id == "string"){
-			return id
-		}
-		return "1"
-	}
-	const event= useEvent(id())
+import { IEvent } from "../../../types"
+
+
+type Props = {
+	event: IEvent
+}
+
+const Event : NextPage<Props> = ({event}: Props) => {
 	
 	return(
 		event&&
@@ -29,24 +23,16 @@ const Event = () => {
 
 export default Event
 
-export const getStaticPaths: GetStaticPaths = () => {
-	return { 
-		paths: [
-			{ params: { id: "1" }},
-			{ params: { id: "2" }},
-			{ params: { id: "3" }},
-			{ params: { id: "4" }},
-		], 
-		fallback: false
-	}
-}
+const URL_WEB = process.env.URL_WEB
 
-export const getStaticProps : GetStaticProps = async ()=> {
-
-	
-
+export const getServerSideProps: GetServerSideProps = async (context : GetServerSidePropsContext) => {
+	const id = parseInt(context.params?.id as string)
+	const res = await fetch(URL_WEB + `api/events/${id}`)
+	const event = await res.json()
 	return {
-		props: {},
+		props: { event ,
+		revalidate: 10,
+		}
 	}
 }
 
