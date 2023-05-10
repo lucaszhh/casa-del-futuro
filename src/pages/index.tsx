@@ -5,6 +5,8 @@ import Head from "next/head"
 import React from "react"
 import CardLayout from "@/components/cardLayout"
 import { ICourse, IEvent } from '../../types'
+import AboutUs from '@/components/aboutUs'
+import { cdf } from '../../data'
 
 type Props = {
 	courses: ICourse[],
@@ -22,6 +24,7 @@ const Home: NextPage<Props> =({courses, events} : Props) => {
 			<CardLayout random isEvent={false} data={courses}/>
 			<Quote/>
 			<CardLayout random isEvent data={events}/>
+			<AboutUs data={cdf}/>
 		</>
 	)
 }

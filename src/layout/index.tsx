@@ -1,4 +1,4 @@
-import ResponsiveAppBar from "@/components/headerMui"
+import ResponsiveAppBar from "@/components/header"
 import React from "react"
 
 interface Props {

@@ -1,11 +1,14 @@
-import { ICourse, IEvent, IQuote } from "../types"
+import { DESCRIPTION_CDF, DESCRIPTION_FABLAB } from "../constants"
+import { IAbotUs, ICourse, IEvent, IQuote } from "../types"
+import  fablabImage  from "/public/imgs/fablab.png"
+import cdfImage from "/public/imgs/cartelCasaDelFuturo.png"
 
 export const courses : ICourse[] = [
 	{
 		id: "1",
 		title: " Fotografía",
 		image: "https://images.freeimages.com/images/large-previews/03e/black-rat-snake-rat-snake-snake-reptile-juvenile-snake-1356968.jpg",
-		description: "Aprenderás a tomar fotografías artísticas con las herramientas que nos brindan los teléfonos celulares. Conocerá conceptos básicos de composición e iluminación; además se aprenderá a utilizar aplicaciones de edición fotográfica para celulares.",
+		description: "Aprenderás a tomar fotografías artísticas con las herramientas que nos brindan los teléfonos celulares. Conocerá conceptos básicos de composición e iluminación, además se aprenderá a utilizar aplicaciones de edición fotográfica para celulares.",
 		duration: "2 meses",
 		category: {
 			category:"Audiovisuales",
@@ -196,3 +199,13 @@ export const quote : IQuote[] = [
 		author:"Bill Gates"
 	},
 ]
+
+export const cdf : IAbotUs = {
+	description : DESCRIPTION_CDF,
+	image: cdfImage
+}
+
+export const fablab : IAbotUs = {
+	description : DESCRIPTION_FABLAB,
+	image: fablabImage
+}

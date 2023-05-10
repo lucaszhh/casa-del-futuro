@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image"
+
 export interface IEvent {
     id: string,
     title: string,
@@ -30,4 +32,9 @@ export interface IQuote {
 export interface ICategory{
     category: string,
     icon: string
+}
+
+export interface IAbotUs{
+    description: string,
+    image: StaticImageData,
 }
