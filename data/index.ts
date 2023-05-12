@@ -201,11 +201,13 @@ export const quote : IQuote[] = [
 ]
 
 export const cdf : IAbotUs = {
+	title:"Un poco de nosotros",
 	description : DESCRIPTION_CDF,
 	image: cdfImage
 }
 
 export const fablab : IAbotUs = {
+	title:"FabLab",
 	description : DESCRIPTION_FABLAB,
 	image: fablabImage
 }

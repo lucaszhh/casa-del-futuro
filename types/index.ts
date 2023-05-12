@@ -35,6 +35,7 @@ export interface ICategory{
 }
 
 export interface IAbotUs{
+    title: string,
     description: string,
     image: StaticImageData,
 }

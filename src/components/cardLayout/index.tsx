@@ -1,7 +1,8 @@
 import React from "react"
 import { IEvent, ICourse } from "../../../types"
 import BasicCard from "../card"
-import { Box, Typography } from "@mui/material"
+import { Box, Button, Typography } from "@mui/material"
+import Link from "next/link"
 
 type props = {
     data: IEvent[] | ICourse[],
@@ -28,13 +29,18 @@ const CardLayout = ({ data, isEvent, random }: props) => {
     })
 
     return (
-        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2rem", paddingBottom: "5rem" }}>
+        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2rem", paddingBottom: "50px" }}>
             <Typography variant="h3" sx={{ padding: "2rem 2.5rem 0rem", fontWeight: "bold" }}>
                 {isEvent ? "Eventos" : "Cursos"}
             </Typography>
             <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "50px", maxWidth: "1000px", }}>
                 {cardList}
             </Box>
+            {random &&
+                <Link href={isEvent ? "/eventos" : "/cursos"}>
+                    <Button variant="primary" sx={{width:"350px", padding:"10px 80px", fontSize:"20px", margin:"30px", '@media screen and (max-width: 768px)': {width:"250px", margin:"0", padding:"10px 40px", fontSize:"unset"}}}>ver mas {isEvent ? "Eventos" : "Cursos"}</Button>
+                </Link>
+            }
         </Box>
     )
 }

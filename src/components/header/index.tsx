@@ -57,12 +57,7 @@ const socialMedia = [
         name: "YouTube",
         url: "https://www.youtube.com/@casadelfuturogc6632",
         icon: faYoutube
-    },
-    {
-        name: "E-mail",
-        url: "https://mail.google.com/mail/",
-        icon: faEnvelope
-    },
+    }
 ]
 
 function ResponsiveAppBar() {
