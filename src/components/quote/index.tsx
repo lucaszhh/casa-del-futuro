@@ -12,10 +12,10 @@ const Quote = () => {
             {quote &&
                 <>
                     <FontAwesomeIcon style={{ fontSize: "40px" }} icon={faQuoteRight} />
-                    <Typography variant="h4" component="div" sx={{ textAlign: "center" }}>
+                    <Typography variant="h1" sx={{ textAlign: "center" }}>
                         {quote.quote}
                     </Typography>
-                    <Typography variant="h6" component="div" sx={{ fontStyle: "italic" }}>
+                    <Typography variant="h2" sx={{ fontStyle: "italic" }}>
                         {quote.author}
                     </Typography>
                 </>

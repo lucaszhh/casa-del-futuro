@@ -3,6 +3,7 @@ import Image from "next/image"
 import { GetServerSideProps, GetServerSidePropsContext, NextPage } from "next"
 
 import { IEvent } from "../../../types"
+import Box from "@mui/material/Box"
 
 
 type Props = {
@@ -10,14 +11,13 @@ type Props = {
 }
 
 const Event : NextPage<Props> = ({event}: Props) => {
-	
 	return(
 		event&&
-		<div>
+		<Box>
 			<Image src={event.image} width="100" height="40" alt={event.title}/>
 			<h3>{event.title}</h3>
-			<p>{event.description}</p>
-		</div>      
+			<p>{event.description}</p>   
+		</Box>
 	)
 }
 
