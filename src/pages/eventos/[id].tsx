@@ -27,6 +27,9 @@ const Event : NextPage<Props> = ({event}: Props) => {
 				<Typography variant="subtitle1" color="text.secondary">
                     Duración: {event.duration}
                 </Typography>
+				<Typography variant="subtitle1" color="text.secondary">
+                    Día: {event.date}
+                </Typography>
 				<Typography variant="subtitle1">{event.description}</Typography>
 			</Box>
 		</Box>
