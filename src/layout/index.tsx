@@ -1,3 +1,4 @@
+import Footer from "@/components/footer"
 import ResponsiveAppBar from "@/components/header"
 import React from "react"
 
@@ -10,6 +11,7 @@ const Layout= ({children}: Props) => {
 		<>
 			<ResponsiveAppBar/>
 			{children}
+			<Footer></Footer>
 		</>
 	)
 }

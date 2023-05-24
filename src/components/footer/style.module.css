@@ -1,0 +1,136 @@
+/* Footer styles */
+.footer {
+    background-color: #3f3f3f;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.footercont {
+    /* padding: 1vw; */
+    width: 100%;
+    max-width: 1800px;
+    display: grid;
+    grid-template:
+        "gc   sep1    contacto  sep2    muni sep3    mapa" 200px /
+        1fr auto 1fr auto 1fr auto 1fr;
+    padding: 12px 20px;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footersep {
+    width: 2px;
+    border: none;
+    background-color: #646464;
+    height: 80%;
+}
+
+.sep1 {
+    grid-area: sep1;
+    place-self: center;
+}
+
+.sep2 {
+    grid-area: sep2;
+    place-self: center;
+}
+
+.sep3 {
+    grid-area: sep3;
+    place-self: center;
+}
+
+.logogc {
+    grid-area: gc;
+    place-self: center;
+    height: 100%;
+    /* width: 100%; */
+    width: 184px;
+
+    background-image: url("/imgs/logoCasaDelFuturo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background-color: aqua; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logogc:hover {
+    animation: flip 1s;
+}
+
+.infomuni {
+    grid-area: muni;
+    place-self: center;
+    font-size: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    text-align: left;
+}
+
+.infomuni p{
+    display: flex;
+    gap: 10px;
+}
+
+.contacto {
+    grid-area: contacto;
+    place-self: center;
+    font-size: 88%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    text-align: center;
+    padding-bottom: 18px;
+}
+
+.iconoshoriz{
+    display: flex;
+    gap: 20px;
+}
+
+.iconoshoriz .socialitem{
+    font-size: 30px;
+    color: #FFF;
+}
+
+.iconoshoriz .socialitem:hover {
+    color: #e0e0e0;
+    position: relative;
+    bottom: 3px;
+}
+
+.mapa {
+    grid-area: mapa;
+    place-self: center;
+    font-size: 90%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+    .footercont {
+        grid-template:
+            "contacto" 100px
+            "sep1" 2px
+            "muni" 100px
+            "sep2" 2px
+            "mapa" 200px
+            "sep3" 2px
+            "gc" 100px /
+            1fr;
+    }
+}

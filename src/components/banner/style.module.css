@@ -1,0 +1,33 @@
+.container {
+    background-image: url("/imgs/casaDelFuturo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    color: #000;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: end;
+    padding: 50px;
+}
+
+.texto{
+    width: 50%;
+    background-color: #c4c4c4bf;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+    .container{
+        text-align: center;
+        align-items: center;
+        height: 300px;
+    }
+    .texto{
+        width: 90%;
+        padding: 5px;
+    }
+}

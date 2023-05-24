@@ -1,6 +1,6 @@
 /* Textos globales del home */
-export const HOME_BANNER_TITLE = "Bienvenid@s a Casa del Futuro Godoy Cruz"
-export const HOME_BANNER_DESCRIPTION = "Espacio educativo, para jóvenes de 15 a 30 años, orientado a la capacitación gratuita en oficios digitales, tradicionales y para la empleabilidad."
+export const HOME_BANNER_TITLE = "Casa del Futuro - Godoy Cruz"
+export const HOME_BANNER_DESCRIPTION = "La Casa del Futuro Godoy Cruz es una institución de educación no formal que ofrece capacitaciones, charlas y talleres gratuitos sobre oficios digitales a jóvenes de entre 15 a 30 años."
 
 /* Textos descripcion Casa del futuro y Fablab */
 export const DESCRIPTION_CDF = "La Casa del Futuro Godoy Cruz es una institución de educación no formal que ofrece capacitaciones, charlas y talleres gratuitos sobre oficios digitales a jóvenes de entre 15 a 30 años. Fue inaugurada en 2018 con el propósito de brindar un medio de contención a jóvenes que deseaban capacitarse en oficios tradicionales, pero en 2020 se busca impulsar un nuevo perfil enfocado en las nuevas tecnologías, como la programación, el diseño, la producción audiovisual, musical y el Internet de las Cosas, para ayudar a los jóvenes a elegir una carrera universitaria o insertarse en la nueva matriz productiva de la provincia. Desde entonces, la Casa del Futuro-Godoy Cruz ha adquirido mayor aceptación y ha creado un FabLab para acercar al público a la producción de objetos y conocimiento en nuevas tecnologías y herramientas. La institución busca complementar la educación formal para preparar a los jóvenes de manera gratuita para los nuevos tiempos de cambio en materia de oficios digitales."
