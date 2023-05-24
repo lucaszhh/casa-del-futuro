@@ -14,7 +14,7 @@
     padding: 50px;
 }
 
-.texto{
+.texto, .texto1{
     width: 50%;
     background-color: #c4c4c4bf;
     padding: 20px;
@@ -29,5 +29,8 @@
     .texto{
         width: 90%;
         padding: 5px;
+    }
+    .texto1{
+        display: none;
     }
 }

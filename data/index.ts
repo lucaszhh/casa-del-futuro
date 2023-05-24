@@ -2,6 +2,7 @@ import { DESCRIPTION_CDF, DESCRIPTION_FABLAB } from "../constants"
 import { IAbotUs, ICourse, IEvent, IQuote } from "../types"
 import  fablabImage  from "/public/imgs/fablab.png"
 import cdfImage from "/public/imgs/cartelCasaDelFuturo.png"
+import escuelaProgramacionImg from "/public/imgs/logoEscuelaProgramacion.png"
 
 export const courses : ICourse[] = [
 	{
@@ -742,6 +743,21 @@ export const quote : IQuote[] = [
 		quote:"La emoción de aprender nuevas tecnologías es increíblemente alta.",
 		author:"Bill Gates"
 	},
+	{
+		id:"3",
+		quote:"Nadie lo ignora todo, nadie lo sabe todo. Por eso aprendemos siempre.",
+		author:"Paulo Freire"
+	},
+	{
+		id:"4",
+		quote:"Al fin y al cabo, somos lo que hacemos para cambiar lo que somos.",
+		author:"Eduardo Galeano"
+	},
+	{
+		id:"5",
+		quote:"La educación no se imparte, se devuelve, la educación no es un acto de generosidad sino de justicia.",
+		author:"Liliana Bodoc"
+	},
 ]
 
 export const cdf : IAbotUs = {
@@ -759,5 +775,5 @@ export const fablab : IAbotUs = {
 export const escuelaProgramacion : IAbotUs = {
 	title:"Escuela de programación",
 	description : "Si sos un apasionado por la tecnología y queres fortalecer tus conocimientos en el mundo de la programación. Estamos orgullosos de anunciar el lanzamiento de nuestra nueva escuela de programación dentro de Casa del Futuro. Nos enfocamos en brindar a los estudiantes una educación de calidad en tecnología y programación, combinando la teoría y la práctica para poder aplicar sus habilidades en el mundo real. Contamos con un gran equipo de profesores altamente capacitados y experimentados para ayudarlos a alcanzar sus objetivos y avanzar de manera constante a lo largo del cursado. No solo aprenderás habilidades técnicas, sino que también tendrás la oportunidad de establecer contactos con expertos en la industria, gracias a nuestras alianzas con empresas y universidades. Nos aseguramos que nuestros estudiantes tengan una experiencia práctica y puedan aplicar lo aprendido en proyectos reales. La oferta educativa está diseñada para adaptarse a diferentes niveles de conocimiento, y cubre una amplia variedad de temas relevantes en la industria. Estamos actualizando los programas permanente en base a las últimas tecnologías y tendencias, para ofrecer a nuestros estudiantes la mejor educación posible. Los cursos tienen una duración de tres meses y cuatro horas semanales de manera presencial. Para poder realizarlos deberán llenar los formularios de preinscripción de cada una de las propuestas en la cuál querés ingresar y rendir un examen nivelatorio. Los mejores promedios de cada uno de ellos ingresarán al cupo asignado que tenemos disponibles. Las propuestas que tenemos son:",
-	image: fablabImage
+	image: escuelaProgramacionImg
 }
