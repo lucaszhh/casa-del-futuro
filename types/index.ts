@@ -6,7 +6,8 @@ export interface IEvent {
     description: string,
     image: string,
     duration: string,
-    category: ICategory
+    category: ICategory,
+    date?: string,
 }
 
 export interface ICourse  {
@@ -37,5 +38,5 @@ export interface ICategory{
 export interface IAbotUs{
     title: string,
     description: string,
-    image: StaticImageData,
+    image: StaticImageData | string,
 }

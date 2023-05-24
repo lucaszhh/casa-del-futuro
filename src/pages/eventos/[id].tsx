@@ -1,10 +1,9 @@
 import React from "react"
 import Image from "next/image"
 import { GetServerSideProps, GetServerSidePropsContext, NextPage } from "next"
-
 import { IEvent } from "../../../types"
-import Box from "@mui/material/Box"
-
+import { Box, Typography } from "@mui/material"
+import Head from "next/head"
 
 type Props = {
 	event: IEvent
@@ -12,12 +11,26 @@ type Props = {
 
 const Event : NextPage<Props> = ({event}: Props) => {
 	return(
+		
 		event&&
-		<Box>
-			<Image src={event.image} width="100" height="40" alt={event.title}/>
-			<h3>{event.title}</h3>
-			<p>{event.description}</p>   
+		<>
+		<Head>
+			<title>Casa del futuro</title>
+		</Head>
+		<Box sx={{display: "flex", alignItems: "center", border: "solid #C4C4C4 1px",borderRadius:"20px", margin:"10%", padding: "10px" ,'@media screen and (max-width: 768px)': {flexDirection:"column"}}}>
+			<Image src={event.category.icon} alt={event.category.category} width={350} height={280}  style={{width:"100%", maxWidth:"350px", height:"auto",margin:"auto"}}/>
+			<Box>
+				<Typography variant="subtitle2" color="text.secondary" gutterBottom>
+						{event.category.category}
+				</Typography>
+				<Typography variant="h1">{event.title}</Typography>
+				<Typography variant="subtitle1" color="text.secondary">
+                    Duración: {event.duration}
+                </Typography>
+				<Typography variant="subtitle1">{event.description}</Typography>
+			</Box>
 		</Box>
+		</>
 	)
 }
 

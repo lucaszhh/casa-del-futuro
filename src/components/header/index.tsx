@@ -35,11 +35,11 @@ const pages = [
         url: "/eventos",
         icon: faCalendarAlt
     },
-    {
+/*     {
         page: "FabLab",
         url: "/fablab",
         icon: faChalkboardUser
-    },
+    }, */
 ]
 
 const socialMedia = [

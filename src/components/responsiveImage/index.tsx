@@ -2,7 +2,7 @@ import Image, { StaticImageData } from 'next/image'
 import { useMediaQuery } from '@material-ui/core'
 
 interface ResponsiveImageProps {
-    src: StaticImageData;
+    src: StaticImageData | string;
     alt: string;
     width: number;
     height: number;

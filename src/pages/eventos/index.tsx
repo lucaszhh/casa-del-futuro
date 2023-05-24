@@ -2,13 +2,21 @@ import React, { useContext } from "react"
 import CardLayout from "@/components/cardLayout"
 import { GetServerSideProps, NextPage } from "next"
 import { IEvent } from "../../../types"
+import Head from "next/head"
 
 type Props = {
 	events: IEvent[]
 }
 
 const Events: NextPage<Props> = ({events}:Props) => {
-	return <CardLayout isEvent data={events}/>
+	return (
+	<>
+		<Head>
+			<title>Casa del futuro</title>
+		</Head>
+		<CardLayout isEvent data={events}/>
+	</>
+	)
 }
 
 const URL_WEB = process.env.URL_WEB
