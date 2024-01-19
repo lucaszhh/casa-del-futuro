@@ -4,7 +4,6 @@ export interface IEvent {
     id: string,
     title: string,
     description: string,
-    image: string,
     duration: string,
     category: ICategory,
     date?: string,
@@ -14,7 +13,6 @@ export interface ICourse  {
     id: string,
     title: string,
     description: string,
-    image: string,
     duration: string,
     category: ICategory
 }
