@@ -18,7 +18,7 @@ export default function Document() {
 
 				<meta property="og:title" content="Casa del Futuro" />
 				<meta property="og:description"
-					content="Página web sobre los proyectos realizados en los talleres de Programación Web, JavaScript, Diseño UX/UI y React JavaScript Framework en la Casa del Futuro" />
+					content="La Casa del Futuro Godoy Cruz es una institución de educación no formal que ofrece capacitaciones, charlas y talleres gratuitos sobre oficios digitales para jóvenes desde los 15 años." />
 				<meta property="og:image" content="https://casa-del-futuro.vercel.app/imgs/casita.png" />
 				<meta property="og:url" content="https://casa-del-futuro.vercel.app/" />
 				<meta property="og:type" content="website" />
