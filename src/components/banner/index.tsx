@@ -9,7 +9,7 @@ import { Typography } from "@mui/material"
 export const Banner = () => {
     return (
         <Box className={styles.container} >
-            <Typography className={styles.texto} variant="h1">{HOME_BANNER_TITLE}</Typography>
+            <Typography className={styles.texto1} variant="h1">{HOME_BANNER_TITLE}</Typography>
             <Typography className={styles.texto} variant="h2">{HOME_BANNER_DESCRIPTION}</Typography>
         </Box>
         )
