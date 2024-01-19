@@ -29,7 +29,7 @@ const Home: NextPage<Props> =({courses, events} : Props) => {
 	)
 }
 
-const URL_WEB = process.env.URL_WEB
+const URL_WEB: string = process.env.URL_WEB || '';
 
 export const getServerSideProps: GetServerSideProps = async () => {
 	const resCourse = await fetch(URL_WEB + "api/courses")
